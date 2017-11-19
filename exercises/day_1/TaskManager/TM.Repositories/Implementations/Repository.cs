@@ -15,7 +15,7 @@ namespace TM.Repositories.Implementations
         #region Constructors
         public Repository(DbContext context)
         {
-            this.Context = context ?? throw new ArgumentException("An instance of DbContext is required to use this repository.", "context");
+            this.Context = context;//?? throw new ArgumentException("An instance of DbContext is required to use this repository.", "context");
             this.DbSet = this.Context.Set<T>();
         }
 
