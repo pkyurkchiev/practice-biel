@@ -1,0 +1,129 @@
+﻿@section scripts{
+    @Scripts.Render("~/bundles/knockout")
+}
+
+<div class="page-header">
+    <h1>List Task</h1>
+</div>
+
+<a data-bind="click: checkTask" style="cursor: pointer; font-size: 20px;">Create new</a>
+
+<hr />
+
+<div data-bind="visible:IsNew">
+    <form class="form-horizontal" data-bind="submit: addTask">
+        <div data-bind="with: newTask">
+            <div class="form-group">
+                <label for="iName" class="col-md-2 control-label">Name</label>
+                <div class="col-md-10">
+                    <input class="form-control" id="iName" data-bind="value: Name" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="iDescription" class="col-md-2 control-label">Description</label>
+                <div class="col-md-10">
+                    <input class="form-control" id="iDescription" data-bind="value: Description" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="iStartedOn" class="col-md-2 control-label">Start Date</label>
+                <div class="col-md-10">
+                    <input class="form-control" id="iStartedOn" data-bind="value: StartedOn" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="iEndedOn" class="col-md-2 control-label">End Date</label>
+                <div class="col-md-10">
+                    <input class="form-control" id="iEndedOn" data-bind="value: EndedOn" />
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-2 col-md-offset-2">
+                <button type="submit" class="btn btn-primary">Save</button>
+                <button type="button" class="btn btn-default" data-bind="click: checkTask">Close</button>
+            </div>
+        </div>
+    </form>
+
+    <hr />
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: tasks">
+        <tr>
+            <td><!-- ko text:Name --><!--/ko--></td>
+            <td><!-- ko text: moment(StartedOn).format('MMMM Do YYYY') --><!--/ko--></td>
+            <td><!-- ko text: moment(EndedOn).format('MMMM Do YYYY') --><!--/ko--></td>
+            <td><a data-bind="click: $parent.deleteTask">delete</a></td>
+        </tr>
+    </tbody>
+</table>
+
+@*<div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a data-bind="click: checkTask"><h4>Add Task</h4></a>
+                </div>
+                <div class="panel-body">
+                    <ul class="list-unstyled" data-bind="foreach: tasks">
+                        <li>
+                            <span><!-- ko text:Name --><!--/ko--></span>
+
+                            <small><a href="#" data-bind="click: $parent.getDetails">Details</a></small>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--ko if:details() -->
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2>Detail</h2>
+                </div>
+                <div class="panel-body">
+                    <table class="table">
+                        <tr><td>Name:</td><td><span data-bind="text: details().Name"></span></td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!--/ko-->
+        <div class="col-md-5" data-bind="visible:IsNew">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">Add Task</h2>
+                </div>
+
+                <div class="panel-body">
+                    <form class="form-horizontal" data-bind="submit: addTask">
+                        <div data-bind="with: newTask">
+                            <div class="form-group">
+                                <label for="iName" class="col-md-2 control-label">Name</label>
+                                <div class="col-md-10">
+                                    <input class="form-control" id="iName" data-bind="value: Name" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="iDescription" class="col-md-2 control-label">Description</label>
+                                <div class="col-md-10">
+                                    <input class="form-control" id="iDescription" data-bind="value: Description" />
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>*@
