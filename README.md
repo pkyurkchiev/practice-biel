@@ -3,7 +3,7 @@ This repository is part of the web programing course of Plovdiv University
 
 
 # 
-### Thechnolagis and Tools
+### Technologies and Tools
 * N-layer architecture
 * Microsoft ASP.NET Web API 2 - [Link](https://msdn.microsoft.com/en-us/library/dn448365(v=vs.118).aspx)
 * KnockoutJS Javascript Framework - [Link](https://knockoutjs.com)
