@@ -1,6 +1,6 @@
 # Task One
 
-* Create new Web services. The application need to manage onlain library. By manage i mean to have simple CRUD service:
+* Create new Web services. The application need to manage onlain library. By manage, i mean a simple CRUD services:
 * Get - return all book
 * GetById - return book filtered by id
 * Post - insert book
