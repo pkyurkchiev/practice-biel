@@ -1,5 +1,5 @@
 # Introduction to Web Programing
-This repository is part of the web programing course of Plovdiv University
+This repository is part of the practice course for Business Informatics with English Language of Plovdiv University
 
 
 # 
