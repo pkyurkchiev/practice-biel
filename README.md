@@ -2,8 +2,16 @@
 This repository is part of the web programing course of Plovdiv University
 
 
+# 
+### Thechnolagis and Tools
+* N-layer architecture
+* Microsoft ASP.NET Web API 2 - [Link](https://msdn.microsoft.com/en-us/library/dn448365(v=vs.118).aspx)
+* KnockoutJS Javascript Framework - [Link](https://knockoutjs.com)
+
+
+
 #
 ### Weeks Schedule
 
-* Web programing day one - [exercises](https://github.com/pkyurkchiev/web-programing/tree/master/exercises/day_1/TaskManager)
-* Web programing day two
+* Day one - [exercises](https://github.com/pkyurkchiev/web-programing/tree/master/exercises/day_1/TaskManager)
+* Day two - [exercises](https://github.com/pkyurkchiev/web-programing/tree/master/exercises/day_2/TaskManager)
