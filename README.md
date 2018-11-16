@@ -1,4 +1,4 @@
-# Introduction to Web Programing
+# Introduction to Practice
 This repository is part of the practice course for Business Informatics with English Language of Plovdiv University
 
 
