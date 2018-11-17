@@ -11,7 +11,7 @@ This repository is part of the practice course for Business Informatics with Eng
 
 
 #
-### Weeks Schedule
+### Days Schedule
 
-* Day one - [exercises](https://github.com/pkyurkchiev/web-programing/tree/master/exercises/day_1/TaskManager)
-* Day two - [exercises](https://github.com/pkyurkchiev/web-programing/tree/master/exercises/day_2/TaskManager)
+* Day one
+* Day two
