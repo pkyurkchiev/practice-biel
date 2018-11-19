@@ -20,6 +20,6 @@
 ### How to download last exercises from the course with git bash.
 
 * Clone the repository
-  * git clone https://github.com/pkyurkchiev/web-programing.git
+  * git clone https://github.com/pkyurkchiev/practice-biel.git
 * Checkout the branch with the completed exercises
   * git checkout completed
