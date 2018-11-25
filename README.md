@@ -13,6 +13,6 @@ This repository is part of the practice course for Business Informatics with Eng
 #
 ### Days Schedule
 
-* Day one - [exercises 1](https://github.com/pkyurkchiev/practice-biel\exercises\day_1\TaskManager)
-* Day two - [exercises 2](https://github.com/pkyurkchiev/practice-biel\exercises\day_2\TaskManager)
+* Day one - [exercises 1](https://github.com/pkyurkchiev/practice-biel/tree/master/exercises/day_1)
+* Day two - [exercises 2](https://github.com/pkyurkchiev/practice-biel/tree/master/exercises/day_2)
 * Day three -
