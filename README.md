@@ -15,4 +15,4 @@ This repository is part of the practice course for Business Informatics with Eng
 
 * Day one - [exercises 1](https://github.com/pkyurkchiev/practice-biel/tree/master/exercises/day_1)
 * Day two - [exercises 2](https://github.com/pkyurkchiev/practice-biel/tree/master/exercises/day_2)
-* Day three -
+* Day three - [exercises 3](https://github.com/pkyurkchiev/practice-biel/tree/master/exercises/day_3)

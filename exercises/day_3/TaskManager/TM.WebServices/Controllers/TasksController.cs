@@ -1,9 +1,12 @@
 ﻿using System.Web.Http;
+using System.Web.Http.Cors;
 using TM.ApplicationServices.Services.Tasks;
 using TM.ApplicationServices.ViewModels;
 
 namespace TM.WebServices.Controllers
 {
+    [EnableCors("*", "*", "*")]
+    [Route("api/Tasks")]
     public class TasksController : ApiController
     {
         #region Fields
