@@ -5,9 +5,9 @@ This repository is part of the practice course for Business Informatics with Eng
 # 
 ### Technologies and Tools
 * N-layer architecture
-* Microsoft ASP.NET Web API 2 - [link](https://msdn.microsoft.com/en-us/library/dn448365(v=vs.118).aspx)
+* Microsoft ASP.NET CORE API - [link](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-3.0&tabs=visual-studio)
 * KnockoutJS Javascript Framework - [link](https://knockoutjs.com)
-* Apache log4net - [link](https://logging.apache.org/log4net/release/config-examples.html#FileAppender)
+* Serilog configuration - [link](https://github.com/serilog/serilog/wiki/Configuration-Basics)
 
 
 #
