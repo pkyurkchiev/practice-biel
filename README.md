@@ -21,3 +21,4 @@ This repository is part of the practice course for Business Informatics with Eng
 * Day one - [N-Layer architecture](https://github.com/pkyurkchiev/practice-biel/tree/master/presentations/n-layer.pdf)
 * Day two - [exercises 1](https://github.com/pkyurkchiev/practice-biel/tree/master/exercises/day_1)
 * Day three - [exercises 2](https://github.com/pkyurkchiev/practice-biel/tree/master/exercises/day_2)
+* Day forth - [exercises 3](https://github.com/pkyurkchiev/practice-biel/tree/master/exercises/day_3)
