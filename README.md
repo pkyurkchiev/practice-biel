@@ -8,11 +8,7 @@ This repository is part of the practice course for Business Informatics with Eng
 * Microsoft ASP.NET CORE API - [link](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-3.0&tabs=visual-studio)
 * KnockoutJS Javascript Framework - [link](https://knockoutjs.com)
 * Serilog configuration - [link](https://github.com/serilog/serilog/wiki/Configuration-Basics)
-
-
-#
-### NuGet Package Manager Console Guide
-[link](https://github.com/pkyurkchiev/practice-biel/tree/master/documentations/nuget-console.md)
+* NuGet PM Console Guide - [link](https://github.com/pkyurkchiev/practice-biel/tree/master/documentations/nuget-console.md)
 
 
 #
