@@ -9,6 +9,7 @@ This repository is part of the practice course for Business Informatics with Eng
 * KnockoutJS Javascript Framework - [link](https://knockoutjs.com)
 * Serilog configuration - [link](https://github.com/serilog/serilog/wiki/Configuration-Basics)
 * NuGet PM Console Guide - [link](https://github.com/pkyurkchiev/practice-biel/tree/master/documentations/nuget-console.md)
+* Postman - [link](https://www.postman.com/downloads/)
 
 
 #
