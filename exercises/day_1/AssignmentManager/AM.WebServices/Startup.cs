@@ -1,3 +1,5 @@
+using AM.Repositories.Implementations;
+using AM.Repositories.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -10,9 +12,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TM.Data.DbContexts;
+using AM.Data.DbContexts;
 
-namespace TM.WebServices
+namespace AM.WebServices
 {
     public class Startup
     {
@@ -30,6 +32,9 @@ namespace TM.WebServices
                 options.UseSqlServer(Configuration.GetConnectionString("MainDB"))
             );
             services.AddControllers();
+            services.AddScoped<DbContext, AssignmentManagerDbContext>();
+            services.AddTransient<IAssignmentRepository, AssignmentRepository>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

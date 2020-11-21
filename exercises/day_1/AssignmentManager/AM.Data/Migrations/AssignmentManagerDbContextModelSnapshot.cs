@@ -3,17 +3,15 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using TM.Data.DbContexts;
+using AM.Data.DbContexts;
 
-namespace TM.Data.Migrations
+namespace AM.Data.Migrations
 {
     [DbContext(typeof(AssignmentManagerDbContext))]
-    [Migration("20201121115904_Initial")]
-    partial class Initial
+    partial class AssignmentManagerDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

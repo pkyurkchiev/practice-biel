@@ -1,6 +1,6 @@
 using System;
 
-namespace TM.WebServices
+namespace AM.WebServices
 {
     public class WeatherForecast
     {

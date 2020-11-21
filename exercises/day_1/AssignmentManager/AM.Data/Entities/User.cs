@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace TM.Data.Entities
+namespace AM.Data.Entities
 {
     public class User : BaseEntity
     {

@@ -2,9 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using TM.Data.Entities;
+using AM.Data.Entities;
 
-namespace TM.Data.DbContexts
+namespace AM.Data.DbContexts
 {
     public class AssignmentManagerDbContext : DbContext
     {
