@@ -17,19 +17,7 @@ namespace TM.WebServices.Controllers
             return Ok("Hello world!");
         }
 
-        [HttpGet("[action]/{id}")]
-        public IActionResult CombineParams([FromRoute] int id, [FromQuery] string name)
-        {
-            string result = "";
-
-            for (int i = 0; i < id; i++)
-            {
-                result += $"Hello {name}!\n";
-            }
-
-            return Ok(result);
-        }
-
+        // http://localhost:55814/api/home/CombineQueryParams?name=Jane&id=5
         [HttpGet("[action]")]
         public IActionResult CombineQueryParams([FromQuery] int id, [FromQuery] string name)
         {
@@ -43,8 +31,23 @@ namespace TM.WebServices.Controllers
             return Ok(result);
         }
 
+        // http://localhost:55814/api/home/CombineRouteParams/3/Jane
         [HttpGet("[action]/{id}/{name}")]
         public IActionResult CombineRouteParams([FromRoute] int id, [FromRoute] string name)
+        {
+            string result = "";
+
+            for (int i = 0; i < id; i++)
+            {
+                result += $"Hello {name}!\n";
+            }
+
+            return Ok(result);
+        }
+
+        // http://localhost:55814/api/home/CombineParams/5?name=Jane
+        [HttpGet("[action]/{id}")]
+        public IActionResult CombineParams([FromRoute] int id, [FromQuery] string name)
         {
             string result = "";
 
