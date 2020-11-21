@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TM.Data.DbContexts;
 using TM.Data.Entities;
 
 namespace TM.WebServices.Controllers
@@ -12,25 +13,25 @@ namespace TM.WebServices.Controllers
     [ApiController]
     public class AssignmentsController : ControllerBase
     {
-        private static List<Assignment> assignments = new List<Assignment>
+        private readonly AssignmentManagerDbContext _context;
+
+        public AssignmentsController(AssignmentManagerDbContext context)
         {
-            new Assignment { Id = 1, Title = "Do you homework", StartedOn = DateTime.Now },
-            new Assignment { Id = 2, Title = "Go home", StartedOn = DateTime.Now.AddHours(1) }
-        };
+            _context = context;
+        }
 
         // [GET] http://localhost:55814/api/assignments
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(assignments);
+            return Ok(_context.Assignments.ToList());
         }
 
         // [POST] http://localhost:55814/api/assignments
         /// <summary>
         /// Body param example: 
         /// {
-        ///   "Id": 3,
-        ///   "Title": "Start work",
+        ///   "title": "Start work",
         ///   "startedOn": "2020-10-20",
         ///   "endedOn": "2020-11-22"
         /// }
@@ -40,18 +41,21 @@ namespace TM.WebServices.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] Assignment assignment)
         {
-            assignments.Add(assignment);
-            return Ok(assignments);
+            _context.Assignments.Add(assignment);
+            _context.SaveChanges();
+
+            return Ok();
         }
 
         // [DELETE] http://localhost:55814/api/assignments/1
         [HttpDelete("{id}")]
         public IActionResult Delete([FromRoute] int id)
         {
-            var assignment = assignments.SingleOrDefault(x => x.Id == id);
-            assignments.Remove(assignment);
+            var assignment = _context.Assignments.Find(id);
+            _context.Assignments.Remove(assignment);
+            _context.SaveChanges();
 
-            return Ok(assignments);
+            return Ok();
         }
 
         // [PUT] http://localhost:55814/api/assignments/1
@@ -63,13 +67,14 @@ namespace TM.WebServices.Controllers
         /// </summary>
         /// <param name="assignment"></param>
         /// <returns></returns>
-        [HttpPut("{id}")]
-        public IActionResult Put([FromRoute] int id, [FromBody] Assignment assignment)
-        {
-            var assignmentFound = assignments.SingleOrDefault(x => x.Id == id);
-            assignmentFound.Title = assignment.Title;
+        //[HttpPut("{id}")]
+        //public IActionResult Put([FromRoute] int id, [FromBody] Assignment assignmentBody)
+        //{
+        //    var assignment = _context.Assignments.Find(id);
+        //    assignment.Title = assignmentBody.Title;
+        //    _context.
 
-            return Ok(assignments);
-        }
+        //    return Ok(assignments);
+        //}
     }
 }
