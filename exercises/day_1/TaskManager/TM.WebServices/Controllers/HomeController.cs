@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace TM.WebServices.Controllers
@@ -58,5 +59,24 @@ namespace TM.WebServices.Controllers
 
             return Ok(result);
         }
+
+        // http://localhost:55814/api/home/calculator?a=4&b=11.4
+        [HttpGet("calculator")]
+        public IActionResult Calculator([FromQuery] double a, [FromQuery] double b)
+        {
+            Rectangle rectangle = new Rectangle
+            {
+                Perimeter = a * 2 + b * 2,
+                Aria = a * b
+            };
+
+            return Ok(rectangle);
+        }
+    }
+
+    public class Rectangle
+    {
+        public double Perimeter { get; set; }
+        public double Aria { get; set; }
     }
 }
