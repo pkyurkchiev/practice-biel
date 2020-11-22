@@ -13,6 +13,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AM.Data.DbContexts;
+using AM.ApplicationServices.Interfaces;
+using AM.ApplicationServices.Implementations;
 
 namespace AM.WebServices
 {
@@ -34,7 +36,10 @@ namespace AM.WebServices
             services.AddControllers();
             services.AddScoped<DbContext, AssignmentManagerDbContext>();
             services.AddTransient<IAssignmentRepository, AssignmentRepository>();
+            services.AddTransient<IUserRepository, UserRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            services.AddTransient<IAssignmentService, AssignmentService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -14,9 +14,11 @@ namespace AM.Repositories.Implementations
         {
             _context = context;
             Assignments = new AssignmentRepository(context);
+            Users = new UserRepository(context);
         }
 
         public IAssignmentRepository Assignments { get; set; }
+        public IUserRepository Users { get; set; }
 
         public DbContext Context
         {

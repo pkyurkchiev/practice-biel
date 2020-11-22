@@ -9,6 +9,7 @@ namespace AM.Repositories.Interfaces
     {
         DbContext Context { get; }
         IAssignmentRepository Assignments { get; set; }
+        IUserRepository Users { get; set; }
         int SaveChanges();
     }
 }

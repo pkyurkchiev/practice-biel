@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AM.ApplicationServices\AM.ApplicationServices.csproj" />
     <ProjectReference Include="..\AM.Repositories\AM.Repositories.csproj" />
-    <ProjectReference Include="..\AM.Data\AM.Data.csproj" />
   </ItemGroup>
 
 
