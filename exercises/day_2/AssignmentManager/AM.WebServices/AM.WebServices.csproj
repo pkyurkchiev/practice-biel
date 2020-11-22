@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AM.ApplicationServices\AM.ApplicationServices.csproj" />
-    <ProjectReference Include="..\AM.Repositories\AM.Repositories.csproj" />
   </ItemGroup>
 
 

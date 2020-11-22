@@ -1,11 +1,9 @@
-﻿using AM.Repositories.Interfaces;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using AM.Data.Entities;
 using AM.ApplicationServices.Interfaces;
 using AM.ApplicationServices.Messaging.Assignments;
 using AM.ApplicationServices.ViewModels;

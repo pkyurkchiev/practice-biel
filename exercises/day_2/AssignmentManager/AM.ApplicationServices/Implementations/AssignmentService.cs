@@ -52,14 +52,24 @@ namespace AM.ApplicationServices.Implementations
             try
             {
                 var assignment = _unitOfWork.Assignments.GetById(request.Id);
-                response.Assignment = new AssignmentViewModel {
-                    Id = assignment.Id,
-                    Title = assignment.Title,
-                    Description = assignment.Description,
-                    StatedOn = assignment.StartedOn,
-                    EndedOn = assignment.EndedOn,
-                    IsActive = assignment.IsActive
-                };
+
+                if (assignment != null)
+                {
+                    response.Assignment = new AssignmentViewModel
+                    {
+                        Id = assignment.Id,
+                        Title = assignment.Title,
+                        Description = assignment.Description,
+                        StatedOn = assignment.StartedOn,
+                        EndedOn = assignment.EndedOn,
+                        IsActive = assignment.IsActive
+                    };
+                }
+                else
+                {
+                    response.StatusCode = System.Net.HttpStatusCode.NotFound;
+                    response.StatusDescription = "Assignment not found";
+                }
             }
             catch (Exception ex)
             {
@@ -76,7 +86,8 @@ namespace AM.ApplicationServices.Implementations
 
             try
             {
-                var assignment = new Assignment {
+                var assignment = new Assignment
+                {
                     Title = request.AssignmentProperties.Title,
                     Description = request.AssignmentProperties.Description,
                     StartedOn = request.AssignmentProperties.StatedOn,
