@@ -10,5 +10,6 @@ namespace AM.ApplicationServices.ViewModels
         public string Description { get; set; }
         public DateTime StatedOn { get; set; }
         public DateTime EndedOn { get; set; }
+        public int OwnerBy { get; set; }
     }
 }

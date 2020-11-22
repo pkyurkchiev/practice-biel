@@ -31,6 +31,7 @@ namespace AM.ApplicationServices.Implementations
                         Description = item.Description,
                         StatedOn = item.StartedOn,
                         EndedOn = item.EndedOn,
+                        OwnerFullName = item.User != null ? item.User.FirstName + " " + item.User.LastName : "",
                         IsActive = item.IsActive
                     });
                 }
@@ -62,6 +63,7 @@ namespace AM.ApplicationServices.Implementations
                         Description = assignment.Description,
                         StatedOn = assignment.StartedOn,
                         EndedOn = assignment.EndedOn,
+                        OwnerFullName = assignment.User != null ? assignment.User.FirstName + " " + assignment.User.LastName : "",
                         IsActive = assignment.IsActive
                     };
                 }
@@ -92,6 +94,7 @@ namespace AM.ApplicationServices.Implementations
                     Description = request.AssignmentProperties.Description,
                     StartedOn = request.AssignmentProperties.StatedOn,
                     EndedOn = request.AssignmentProperties.EndedOn,
+                    OwnedBy = request.AssignmentProperties.OwnerBy,
                     IsActive = true
                 };
 

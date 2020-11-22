@@ -11,6 +11,7 @@ namespace AM.ApplicationServices.ViewModels
         public string Description { get; set; }
         public DateTime StatedOn { get; set; }
         public DateTime EndedOn { get; set; }
+        public string OwnerFullName { get; set; }
         public bool IsActive { get; set; }
     }
 }
