@@ -1,3 +1,24 @@
 ﻿<div>
     <h1>Assignment list</h1>
 </div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Started On</th>
+            <th>Ended On</th>
+            <th>Owner</th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: assignments">
+        <tr>
+            <td><!-- ko text:title --><!-- /ko --></td>
+            <td><!-- ko text:description --><!-- /ko --></td>
+            <td><!-- ko text:moment(startedOn).format('MMMM Do YYYY') --><!-- /ko --></td>
+            <td><!-- ko text:moment(endedOn).format('MMMM Do YYYY') --><!-- /ko --></td>
+            <td><!-- ko text:ownerFullName --><!-- /ko --></td>
+        </tr>
+    </tbody>
+</table>

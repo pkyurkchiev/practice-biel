@@ -20,6 +20,8 @@ namespace AM.WebServices
 {
     public class Startup
     {
+        private readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -30,6 +32,16 @@ namespace AM.WebServices
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(oprtions =>
+            {
+                oprtions.AddPolicy(MyAllowSpecificOrigins,
+                    builder => {
+                        builder.WithOrigins("https://localhost:44336")
+                               .AllowAnyHeader()
+                               .AllowAnyMethod();
+                });          
+            });
+
             services.AddDbContext<AssignmentManagerDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("MainDB"))
             );
@@ -51,7 +63,11 @@ namespace AM.WebServices
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseHttpsRedirection();
+
             app.UseRouting();
+
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseAuthorization();
 

@@ -34,7 +34,7 @@ namespace AM.ApplicationServices.Implementations
                         Id = item.Id,
                         Title = item.Title,
                         Description = item.Description,
-                        StatedOn = item.StartedOn,
+                        StartedOn = item.StartedOn,
                         EndedOn = item.EndedOn,
                         OwnerFullName = item.User != null ? item.User.FirstName + " " + item.User.LastName : "",
                         IsActive = item.IsActive
@@ -67,7 +67,7 @@ namespace AM.ApplicationServices.Implementations
                         Id = assignment.Id,
                         Title = assignment.Title,
                         Description = assignment.Description,
-                        StatedOn = assignment.StartedOn,
+                        StartedOn = assignment.StartedOn,
                         EndedOn = assignment.EndedOn,
                         OwnerFullName = assignment.User != null ? assignment.User.FirstName + " " + assignment.User.LastName : "",
                         IsActive = assignment.IsActive
