@@ -95,18 +95,33 @@ namespace AM.ApplicationServices.Implementations
 
             try
             {
+                int? ownerBy = null;
+                if (request.AssignmentProperties.OwnerBy != 0)
+                    ownerBy = request.AssignmentProperties.OwnerBy;
+
                 var assignment = new Assignment
                 {
                     Title = request.AssignmentProperties.Title,
                     Description = request.AssignmentProperties.Description,
-                    StartedOn = request.AssignmentProperties.StatedOn,
+                    StartedOn = request.AssignmentProperties.StartedOn,
                     EndedOn = request.AssignmentProperties.EndedOn,
-                    OwnedBy = request.AssignmentProperties.OwnerBy,
+                    OwnedBy = ownerBy,
                     IsActive = true
                 };
 
                 _unitOfWork.Assignments.Insert(assignment);
                 _unitOfWork.SaveChanges();
+
+                response.Assignment = new AssignmentViewModel
+                {
+                    Id = assignment.Id,
+                    Title = assignment.Title,
+                    Description = assignment.Description,
+                    StartedOn = assignment.StartedOn,
+                    EndedOn = assignment.EndedOn,
+                    OwnerFullName = assignment.User != null ? assignment.User.FirstName + " " + assignment.User.LastName : "",
+                    IsActive = assignment.IsActive
+                };
             }
             catch (Exception ex)
             {

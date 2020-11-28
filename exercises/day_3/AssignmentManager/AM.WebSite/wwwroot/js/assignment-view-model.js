@@ -4,6 +4,13 @@
 
     self.assignments = ko.observableArray();
     self.error = ko.observable();
+    self.newAssignment = {
+        title: ko.observable(),
+        description: ko.observable(),
+        startedOn: ko.observable(),
+        endedOn: ko.observable()
+    };
+    self.isNew = ko.observable(false);
 
     function ajaxHelper(url, method, data) {
         self.error('');
@@ -21,6 +28,25 @@
             self.assignments(data.assignments);
             console.log(data.assignments);
         });
+    };
+
+    self.addAssignment = function (formElement) {
+        let assignment = {
+            title: self.newAssignment.title(),
+            description: self.newAssignment.description(),
+            startedOn: self.newAssignment.startedOn(),
+            endedOn: self.newAssignment.endedOn()
+        };
+
+        ajaxHelper(baseUrl, 'POST', assignment).done(function (data) {
+            console.log(data.assignment);
+            self.assignments.push(data.assignment);
+            self.checkAssignment();
+        });
+    };
+
+    self.checkAssignment = function () {
+        self.isNew(!self.isNew());
     };
 
     getAllAssignments();

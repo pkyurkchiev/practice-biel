@@ -99,7 +99,7 @@ namespace AM.ApplicationServices.Implementations
                 {
                     Title = request.AssignmentProperties.Title,
                     Description = request.AssignmentProperties.Description,
-                    StartedOn = request.AssignmentProperties.StatedOn,
+                    StartedOn = request.AssignmentProperties.StartedOn,
                     EndedOn = request.AssignmentProperties.EndedOn,
                     OwnedBy = request.AssignmentProperties.OwnerBy,
                     IsActive = true
