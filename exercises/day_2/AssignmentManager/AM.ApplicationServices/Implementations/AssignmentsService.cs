@@ -1,5 +1,6 @@
 ﻿using AM.ApplicationServices.Interfaces;
 using AM.ApplicationServices.Messaging.Assignments;
+using AM.Data.Entites;
 using AM.Repositories.Interfaces;
 using Microsoft.Extensions.Logging;
 using System;
@@ -76,6 +77,69 @@ namespace AM.ApplicationServices.Implementations
                 response.BuildException(ex);
             }
 
+            return response;
+        }
+
+        public InsertAssignmentResponse Insert(InsertAssignmentRequest request)
+        {
+            InsertAssignmentResponse response = new();
+            try
+            {
+                Assignment assignment = new()
+                {
+                    Title = request.AssignmentProperties.Title,
+                    Description = request.AssignmentProperties.Description,
+                    StartedOn = request.AssignmentProperties.StartedOn,
+                    EndedOn = request.AssignmentProperties.EndedOn,
+                    OwnedBy = request.AssignmentProperties.OwnedBy,
+                    IsActive = true
+                };
+
+                _unitOfWork.Assignments.Insert(assignment);
+                _unitOfWork.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "We have a insert error!");
+                response.BuildException(ex);
+            }
+            return response;
+        }
+
+        public UpdateAssignmentResponse Update(UpdateAssignmentRequest request)
+        {
+            UpdateAssignmentResponse response = new();
+            try
+            {
+                var assignment = _unitOfWork.Assignments.GetById(request.Id);
+                assignment.Title = request.AssignmentProperties.Title ?? assignment.Title;
+                assignment.Description = request.AssignmentProperties.Description ?? assignment.Description;
+
+                _unitOfWork.Assignments.Update(assignment);
+                _unitOfWork.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "We have a update error!");
+                response.BuildException(ex);
+            }
+            return response;
+        }
+
+        public DeleteAssignmentResponse Delete(DeleteAssignmentRequest request)
+        {
+            DeleteAssignmentResponse response = new();
+
+            try
+            {
+                _unitOfWork.Assignments.Delete(request.Id);
+                _unitOfWork.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "We have a delete error!");
+                response.BuildException(ex);
+            }
             return response;
         }
     }
