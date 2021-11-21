@@ -1,5 +1,6 @@
 ﻿using AM.ApplicationServices.Interfaces;
 using AM.ApplicationServices.Messaging.Users;
+using AM.Data.Entites;
 using AM.Repositories.Interfaces;
 using Microsoft.Extensions.Logging;
 using System;
@@ -72,6 +73,68 @@ namespace AM.ApplicationServices.Implementations
                 response.BuildException(ex);
             }
 
+            return response;
+        }
+
+        public InsertUserResponse Insert(InsertUserRequest request)
+        {
+            InsertUserResponse response = new();
+            try
+            {
+                User user = new()
+                {
+                    FirstName = request.UserProperties.FirstName,
+                    LastName = request.UserProperties.LastName,
+                    UserName = request.UserProperties.UserName,
+                    IsActive = true
+                };
+
+                _unitOfWork.Users.Insert(user);
+                _unitOfWork.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "We have a insert error!");
+                response.BuildException(ex);
+            }
+            return response;
+        }
+
+        public UpdateUserResponse Update(UpdateUserRequest request)
+        {
+            UpdateUserResponse response = new();
+            try
+            {
+                var user = _unitOfWork.Users.GetById(request.Id);
+                user.FirstName = request.UserProperties.FirstName ?? user.FirstName;
+                user.LastName = request.UserProperties.LastName ?? user.LastName;
+                user.UserName = request.UserProperties.UserName ?? user.UserName;
+
+                _unitOfWork.Users.Update(user);
+                _unitOfWork.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "We have a update error!");
+                response.BuildException(ex);
+            }
+            return response;
+        }
+
+        public DeleteUserResponse Delete(DeleteUserRequest request)
+        {
+            DeleteUserResponse response = new();
+
+            try
+            {
+                _unitOfWork.Users.Delete(request.Id);
+                _unitOfWork.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "We have a delete error!");
+                response.BuildException(ex);
+            }
             return response;
         }
     }

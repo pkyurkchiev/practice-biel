@@ -11,5 +11,8 @@ namespace AM.ApplicationServices.Interfaces
     {
         GetUsersResponse GetAll();
         GetUserResponse GetById(GetUserRequest request);
+        InsertUserResponse Insert(InsertUserRequest request);
+        DeleteUserResponse Delete(DeleteUserRequest request);
+        UpdateUserResponse Update(UpdateUserRequest request);
     }
 }

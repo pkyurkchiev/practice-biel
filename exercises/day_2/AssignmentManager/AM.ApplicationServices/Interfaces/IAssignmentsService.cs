@@ -11,5 +11,8 @@ namespace AM.ApplicationServices.Interfaces
     {
         GetAssignmentsResponse GetAll();
         GetAssignmentResponse GetById(GetAssignmentRequest request);
+        InsertAssignmentResponse Insert(InsertAssignmentRequest request);
+        DeleteAssignmentResponse Delete(DeleteAssignmentRequest request);
+        UpdateAssignmentResponse Update(UpdateAssignmentRequest request);
     }
 }

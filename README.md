@@ -13,8 +13,12 @@ This repository is part of the practice course for Business Informatics with Eng
 
 
 #
-### Days Schedule
+### Course work
+* Task: [Link BG](https://github.com/pkyurkchiev/practice-biel/tree/master/cource-work/README.md)
 
+
+#
+### Days Schedule
 * Day one - [N-Layer architecture](https://github.com/pkyurkchiev/practice-biel/tree/master/presentations/n-layer.pdf)
 * Day two - [exercises 1](https://github.com/pkyurkchiev/practice-biel/tree/master/exercises/day_1)
 * Day three - [exercises 2](https://github.com/pkyurkchiev/practice-biel/tree/master/exercises/day_2)
