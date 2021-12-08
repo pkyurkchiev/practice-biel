@@ -5,4 +5,6 @@
 - Run the solution. Check the server localhost:xxxxx/swagger & the website isloaded.
 #### Step 2
 - Rename the DB in AM.WebServices/appsettings.json to LibraryDB.
-- Rename everything (and everywhere) from AssignmentManager & AM. to LibraryManager & AM.
+- Rename the solution to LibraryManager.
+- Rename every project from AM. to LM.
+- 
