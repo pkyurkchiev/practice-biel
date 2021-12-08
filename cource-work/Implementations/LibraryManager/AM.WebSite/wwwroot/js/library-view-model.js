@@ -1,6 +1,6 @@
 var AssignmentViewModel = function () {
     let self = this;
-    const baseUrl = "https://localhost:44341/api/assignments";
+    const baseUrl = "https://localhost:44309/api/assignments";
 
     self.assignments = ko.observableArray();
     self.error = ko.observable();

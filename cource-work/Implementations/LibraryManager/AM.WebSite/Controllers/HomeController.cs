@@ -1,4 +1,4 @@
-﻿using AM.WebSite.Models;
+﻿using LM.WebSite.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AM.WebSite.Controllers
+namespace LM.WebSite.Controllers
 {
     public class HomeController : Controller
     {

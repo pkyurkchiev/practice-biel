@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AM.Repositories", "AM.Repos
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AM.ApplicationServices", "AM.ApplicationServices\AM.ApplicationServices.csproj", "{6A9576DF-B49B-451C-B881-C6CFAD4CB426}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AM.WebSite", "AM.WebSite\AM.WebSite.csproj", "{B98B4109-DE9C-4111-8FCF-A4D9527C3A27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LM.WebSite", "AM.WebSite\LM.WebSite.csproj", "{B98B4109-DE9C-4111-8FCF-A4D9527C3A27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

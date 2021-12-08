@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AM.WebSite.Controllers
+namespace LM.WebSite.Controllers
 {
-    public class AssignmentsController : Controller
+    public class LibraryController : Controller
     {
         public IActionResult Index()
         {
