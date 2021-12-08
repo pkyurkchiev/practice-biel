@@ -7,5 +7,10 @@
 #### Step 2
 - Rename the DB in AM.WebServices/appsettings.json to LibraryDB.
 - Rename the solution to LibraryManager.
-- Rename every project from AM.WebSite to LM.WebSite.
-- Rename everywhere inside of LM.WebSite the namespaces to the new LM.WebSite.
+- Rename project AM.Data to LM.Data and namespaces inside.
+- Rename project AM.Repositories to LM.Repositories and namespaces inside.
+- Rename project AM.ApplicationServices to LM.ApplicationServices and namespaces inside.
+
+- Rename project AM.WebServices to LM.WebServices and namespaces inside.
+
+- Rename project AM.WebSite to LM.WebSite and namespaces inside.

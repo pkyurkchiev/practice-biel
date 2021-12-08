@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AM.WebServices", "AM.WebServices\AM.WebServices.csproj", "{B266B8CF-9BCC-44F8-88BE-8A8CC2F24272}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LM.WebServices", "AM.WebServices\LM.WebServices.csproj", "{B266B8CF-9BCC-44F8-88BE-8A8CC2F24272}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AM.Data", "AM.Data\AM.Data.csproj", "{3CF4C02E-BF57-422C-A008-25EACE4C7084}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LM.Data", "AM.Data\LM.Data.csproj", "{3CF4C02E-BF57-422C-A008-25EACE4C7084}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AM.Repositories", "AM.Repositories\AM.Repositories.csproj", "{8C775677-0EFA-45C2-8EA8-199C0BF58AF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LM.Repositories", "AM.Repositories\LM.Repositories.csproj", "{8C775677-0EFA-45C2-8EA8-199C0BF58AF3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AM.ApplicationServices", "AM.ApplicationServices\AM.ApplicationServices.csproj", "{6A9576DF-B49B-451C-B881-C6CFAD4CB426}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LM.ApplicationServices", "AM.ApplicationServices\LM.ApplicationServices.csproj", "{6A9576DF-B49B-451C-B881-C6CFAD4CB426}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LM.WebSite", "AM.WebSite\LM.WebSite.csproj", "{B98B4109-DE9C-4111-8FCF-A4D9527C3A27}"
 EndProject
