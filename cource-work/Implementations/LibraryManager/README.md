@@ -12,3 +12,8 @@
 - Rename project AM.ApplicationServices to LM.ApplicationServices and namespaces inside.
 - Rename project AM.WebServices to LM.WebServices and namespaces inside.
 - Rename project AM.WebSite to LM.WebSite and namespaces inside.
+#### Step 3
+- Run migrations through NuGet Package Manager -> Package Manager Console
+- in "Default Project: LM.WebServices" with command `update-database`.
+- Check in SQL Server Object Explorer the new DB "LibraryDb" already exists.
+- Also check the tables dbo.Library & dbo.Users are created under "LibraryDb". 
