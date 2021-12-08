@@ -1,13 +1,13 @@
-﻿using AM.Data.Entites;
+﻿using LM.Data.Entites;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AM.Repositories.Interfaces
+namespace LM.Repositories.Interfaces
 {
-    public interface IAssignmentRepository : IRepository<Assignment>
+    public interface IBookRepository : IRepository<Library>
     {
     }
 }

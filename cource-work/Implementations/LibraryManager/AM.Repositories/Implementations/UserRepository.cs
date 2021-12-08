@@ -1,8 +1,8 @@
-﻿using AM.Data.Entites;
-using AM.Repositories.Interfaces;
+﻿using LM.Data.Entites;
+using LM.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
-namespace AM.Repositories.Implementations
+namespace LM.Repositories.Implementations
 {
     public class UserRepository : Repository<User>, IUserRepository
     {

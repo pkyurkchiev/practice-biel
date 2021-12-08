@@ -1,5 +1,5 @@
-﻿using AM.Data.Entites;
-using AM.Repositories.Interfaces;
+﻿using LM.Data.Entites;
+using LM.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AM.Repositories.Implementations
+namespace LM.Repositories.Implementations
 {
     public class Repository<T> : IRepository<T> where T : BaseEntity
     {
