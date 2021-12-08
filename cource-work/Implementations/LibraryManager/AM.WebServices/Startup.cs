@@ -44,11 +44,11 @@ namespace LM.WebServices
                     });
             });
 
-            services.AddDbContext<BookManagerDbContext>(options => 
+            services.AddDbContext<LibraryManagerDbContext>(options => 
                 options.UseSqlServer(Configuration.GetConnectionString("MainDB")));
             services.AddControllers();
 
-            services.AddScoped<DbContext, BookManagerDbContext>();
+            services.AddScoped<DbContext, LibraryManagerDbContext>();
             services.AddTransient<IBookRepository, BookRepository>();
             services.AddTransient<IUserRepository, UserRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();

@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LM.Data.Migrations
 {
-    [DbContext(typeof(BookManagerDbContext))]
+    [DbContext(typeof(LibraryManagerDbContext))]
     [Migration("20211120115341_Add-Book")]
     partial class AddBook
     {

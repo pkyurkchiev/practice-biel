@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LM.Data.Migrations
 {
-    [DbContext(typeof(BookManagerDbContext))]
-    partial class BookManagerDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(LibraryManagerDbContext))]
+    partial class LibraryManagerDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
