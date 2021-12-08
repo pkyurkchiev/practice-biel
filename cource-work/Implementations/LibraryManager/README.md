@@ -10,7 +10,5 @@
 - Rename project AM.Data to LM.Data and namespaces inside.
 - Rename project AM.Repositories to LM.Repositories and namespaces inside.
 - Rename project AM.ApplicationServices to LM.ApplicationServices and namespaces inside.
-
 - Rename project AM.WebServices to LM.WebServices and namespaces inside.
-
 - Rename project AM.WebSite to LM.WebSite and namespaces inside.
