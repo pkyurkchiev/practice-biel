@@ -3,11 +3,11 @@
 </div>
 
 <p>
-    <a data-bind="click: checkAssignment" style="cursor: pointer;">Create assignment</a>
+    <a data-bind="click: checkBook" style="cursor: pointer;">Create assignment</a>
 </p>
 <div data-bind="visible:isNew">
-    <form data-bind="submit: addAssignment">
-        <div data-bind="with: newAssignment">
+    <form data-bind="submit: addBook">
+        <div data-bind="with: newBook">
             <div class="form-group">
                 <label for="iTitle" class="col-md-2"></label>
                 <div class="col-md-10">
@@ -55,7 +55,7 @@
             <th>Owner</th>
         </tr>
     </thead>
-    <tbody data-bind="foreach: assignments">
+    <tbody data-bind="foreach: libraries">
         <tr>
             <td><!-- ko text:title --><!-- /ko --></td>
             <td><!-- ko text:description --> <!-- /ko --></td>

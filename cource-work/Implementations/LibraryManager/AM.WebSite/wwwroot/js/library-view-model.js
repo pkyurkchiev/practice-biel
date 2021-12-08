@@ -1,10 +1,10 @@
-var AssignmentViewModel = function () {
+var BookViewModel = function () {
     let self = this;
-    const baseUrl = "https://localhost:44309/api/assignments";
+    const baseUrl = "https://localhost:44309/api/library";
 
-    self.assignments = ko.observableArray();
+    self.library = ko.observableArray();
     self.error = ko.observable();
-    self.newAssignment = {
+    self.newBook = {
         title: ko.observable(),
         description: ko.observable(),
         startedOn: ko.observable(),
@@ -23,33 +23,33 @@ var AssignmentViewModel = function () {
         }).fail(function () { self.error('Ajax request error'); });
     };
 
-    function getAllAssignments() {
+    function getAllLibrary() {
         ajaxHelper(baseUrl, 'GET').done(function (data) {
-            self.assignments(data.assignments);
-            console.log(data.assignments);
+            self.library(data.library);
+            console.log(data.library);
         });
     };
 
-    self.addAssignment = function (formElement) {
-        let assignment = {
-            title: self.newAssignment.title(),
-            description: self.newAssignment.description(),
-            startedOn: self.newAssignment.startedOn(),
-            endedOn: self.newAssignment.endedOn()
+    self.addBook = function (formElement) {
+        let book = {
+            title: self.newBook.title(),
+            description: self.newBook.description(),
+            startedOn: self.newBook.startedOn(),
+            endedOn: self.newBook.endedOn()
         };
 
-        ajaxHelper(baseUrl, 'POST', assignment).done(function (data) {
-            console.log(data.assignment);
-            self.assignments.push(data.assignment);
-            self.checkAssignment();
+        ajaxHelper(baseUrl, 'POST', book).done(function (data) {
+            console.log(data.book);
+            self.library.push(data.book);
+            self.checkBook();
         });
     };
 
-    self.checkAssignment = function () {
+    self.checkBook = function () {
         self.isNew(!self.isNew());
     };
 
-    getAllAssignments();
+    getAllLibrary();
 };
 
-ko.applyBindings(new AssignmentViewModel);
+ko.applyBindings(new BookViewModel);
