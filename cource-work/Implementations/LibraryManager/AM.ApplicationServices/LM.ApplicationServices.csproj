@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AM.Repositories\AM.Repositories.csproj" />
+    <ProjectReference Include="..\AM.Repositories\LM.Repositories.csproj" />
   </ItemGroup>
 
 </Project>

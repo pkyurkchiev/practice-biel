@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AM.ApplicationServices.Messaging.Assignments
+namespace LM.ApplicationServices.Messaging.Library
 {
-    public class UpdateAssignmentResponse : ServiceResponseBase
+    public class DeleteBookResponse : ServiceResponseBase
     {
     }
 }

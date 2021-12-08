@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AM.ApplicationServices.Messaging.Users
+namespace LM.ApplicationServices.Messaging.Users
 {
     public class GetUserResponse : ServiceResponseBase
     {

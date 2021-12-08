@@ -5,7 +5,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AM.ApplicationServices.Messaging
+namespace LM.ApplicationServices.Messaging
 {
     public abstract class ServiceResponseBase
     {

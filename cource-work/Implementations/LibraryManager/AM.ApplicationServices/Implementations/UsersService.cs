@@ -1,7 +1,7 @@
-﻿using AM.ApplicationServices.Interfaces;
-using AM.ApplicationServices.Messaging.Users;
-using AM.Data.Entites;
-using AM.Repositories.Interfaces;
+﻿using LM.ApplicationServices.Interfaces;
+using LM.ApplicationServices.Messaging.Users;
+using LM.Data.Entites;
+using LM.Repositories.Interfaces;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AM.ApplicationServices.Implementations
+namespace LM.ApplicationServices.Implementations
 {
     public class UsersService : BaseService, IUsersService
     {

@@ -1,12 +1,12 @@
-﻿using AM.ApplicationServices.Interfaces;
-using AM.Repositories.Interfaces;
+﻿using LM.ApplicationServices.Interfaces;
+using LM.Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AM.ApplicationServices.Implementations
+namespace LM.ApplicationServices.Implementations
 {
     public class BaseService : IBaseService
     {
