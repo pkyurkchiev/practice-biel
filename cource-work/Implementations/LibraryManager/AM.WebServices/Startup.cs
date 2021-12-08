@@ -1,8 +1,8 @@
-using AM.ApplicationServices.Implementations;
-using AM.ApplicationServices.Interfaces;
-using AM.Data.DbContexts;
-using AM.Repositories.Implementations;
-using AM.Repositories.Interfaces;
+using LM.ApplicationServices.Implementations;
+using LM.ApplicationServices.Interfaces;
+using LM.Data.DbContexts;
+using LM.Repositories.Implementations;
+using LM.Repositories.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -18,7 +18,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AM.WebServices
+namespace LM.WebServices
 {
     public class Startup
     {
@@ -38,26 +38,26 @@ namespace AM.WebServices
             {
                 options.AddPolicy(MyAllowSpecificOrigins,
                     builder => {
-                        builder.WithOrigins("https://localhost:44354")
+                        builder.WithOrigins("https://localhost:44345")
                                 .AllowAnyHeader()
                                 .AllowAnyMethod();
                     });
             });
 
-            services.AddDbContext<AssignmentManagerDbContext>(options => 
+            services.AddDbContext<BookManagerDbContext>(options => 
                 options.UseSqlServer(Configuration.GetConnectionString("MainDB")));
             services.AddControllers();
 
-            services.AddScoped<DbContext, AssignmentManagerDbContext>();
-            services.AddTransient<IAssignmentRepository, AssignmentRepository>();
+            services.AddScoped<DbContext, BookManagerDbContext>();
+            services.AddTransient<IBookRepository, BookRepository>();
             services.AddTransient<IUserRepository, UserRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
-            services.AddTransient<IAssignmentsService, AssignmentsService>();
+            services.AddTransient<ILibraryService, LibraryService>();
             services.AddTransient<IUsersService, UsersService>();
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "AM.WebServices", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "LM.WebServices", Version = "v1" });
             });
         }
 
@@ -68,7 +68,7 @@ namespace AM.WebServices
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "AM.WebServices v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "LM.WebServices v1"));
             }
 
             app.UseHttpsRedirection();

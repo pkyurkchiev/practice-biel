@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AM.WebServices.Controllers
+namespace LM.WebServices.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

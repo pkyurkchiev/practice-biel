@@ -1,15 +1,15 @@
-﻿using AM.ApplicationServices.Interfaces;
-using AM.Data.Entites;
-using AM.Repositories.Interfaces;
+﻿using LM.ApplicationServices.Interfaces;
+using LM.Data.Entites;
+using LM.Repositories.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using AM.ApplicationServices.Messaging.Users;
+using LM.ApplicationServices.Messaging.Users;
 
-namespace AM.WebServices.Controllers
+namespace LM.WebServices.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -21,21 +21,21 @@ namespace AM.WebServices.Controllers
             _usersService = usersService;
         }
 
-        // [GET] https://localhost:44341/api/users
+        // [GET] https://localhost:44309/api/users
         [HttpGet]
         public IActionResult Get()
         {
             return Ok(_usersService.GetAll());
         }
 
-        // [GET] https://localhost:44341/api/users/1
+        // [GET] https://localhost:44309/api/users/1
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
             return Ok(_usersService.GetById(new GetUserRequest(id)));
         }
 
-        // [POST] https://localhost:44341/api/assignments
+        // [POST] https://localhost:44309/api/library
         /// <summary>
         /// Body param example: 
         /// {
@@ -52,7 +52,7 @@ namespace AM.WebServices.Controllers
             return Ok(_usersService.Insert(new InsertUserRequest(userVM)));
         }
 
-        // [PUT] https://localhost:44341/api/users/1
+        // [PUT] https://localhost:44309/api/users/1
         /// <summary>
         /// Body param example: 
         /// {
@@ -67,7 +67,7 @@ namespace AM.WebServices.Controllers
             return Ok(_usersService.Update(new UpdateUserRequest(id, userVM)));
         }
 
-        // [DELETE] https://localhost:44341/api/users/1
+        // [DELETE] https://localhost:44309/api/users/1
         [HttpDelete("{id}")]
         public IActionResult Delete([FromRoute] int id)
         {

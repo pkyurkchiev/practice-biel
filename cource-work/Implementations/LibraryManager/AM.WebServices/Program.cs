@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using Serilog;
 using Serilog.Formatting.Compact;
 
-namespace AM.WebServices
+namespace LM.WebServices
 {
     public class Program
     {
