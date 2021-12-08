@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AM.Data.Entites
+namespace LM.Data.Entites
 {
-    public class Assignment : BaseEntity
+    public class Library : BaseEntity
     {
         [StringLength(150, MinimumLength = 3)]
         [Required]

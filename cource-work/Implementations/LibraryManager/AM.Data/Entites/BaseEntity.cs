@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AM.Data.Entites
+namespace LM.Data.Entites
 {
     public abstract class BaseEntity
     {

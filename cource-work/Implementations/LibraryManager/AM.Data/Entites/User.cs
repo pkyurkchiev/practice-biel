@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AM.Data.Entites
+namespace LM.Data.Entites
 {
     public class User : BaseEntity
     {
@@ -18,6 +18,6 @@ namespace AM.Data.Entites
         [Required]
         public string UserName { get; set; }
 
-        public virtual ICollection<Assignment> Assignments { get; set; }
+        public virtual ICollection<Library> Library { get; set; }
     }
 }

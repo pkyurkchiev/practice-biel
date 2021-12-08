@@ -1,25 +1,25 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace AM.Data.Migrations
+namespace LM.Data.Migrations
 {
-    public partial class AddAssignmentRelation : Migration
+    public partial class AddBookRelation : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AddColumn<int>(
                 name: "OwnedBy",
-                table: "Assignments",
+                table: "Library",
                 type: "int",
                 nullable: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Assignments_OwnedBy",
-                table: "Assignments",
+                name: "IX_Library_OwnedBy",
+                table: "Library",
                 column: "OwnedBy");
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Assignments_Users_OwnedBy",
-                table: "Assignments",
+                name: "FK_Library_Users_OwnedBy",
+                table: "Library",
                 column: "OwnedBy",
                 principalTable: "Users",
                 principalColumn: "Id",
@@ -29,16 +29,16 @@ namespace AM.Data.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_Assignments_Users_OwnedBy",
-                table: "Assignments");
+                name: "FK_Library_Users_OwnedBy",
+                table: "Library");
 
             migrationBuilder.DropIndex(
-                name: "IX_Assignments_OwnedBy",
-                table: "Assignments");
+                name: "IX_Library_OwnedBy",
+                table: "Library");
 
             migrationBuilder.DropColumn(
                 name: "OwnedBy",
-                table: "Assignments");
+                table: "Library");
         }
     }
 }
