@@ -25,3 +25,6 @@
 - in "Default Project: LM.WebServices" with command `update-database`.
 - Check in SQL Server Object Explorer the new DB "LibraryDb" already exists.
 - Also check the tables dbo.Library & dbo.Users are created under "LibraryDb". 
+#### Step 5
+- Test the Web API in /swagger.
+- Test the Web API in Postman.
