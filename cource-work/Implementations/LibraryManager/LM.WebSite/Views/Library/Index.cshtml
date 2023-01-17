@@ -1,0 +1,67 @@
+﻿<div>
+    <h1>Library list</h1>
+</div>
+
+<p>
+    <a data-bind="click: checkBook" style="cursor: pointer;">Create assignment</a>
+</p>
+<div data-bind="visible:isNew">
+    <form data-bind="submit: addBook">
+        <div data-bind="with: newBook">
+            <div class="form-group">
+                <label for="iTitle" class="col-md-2"></label>
+                <div class="col-md-10">
+                    <input type="text" class="form-control" id="iTitle" data-bind="value: title" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="iDescription" class="col-md-2"></label>
+                <div class="col-md-10">
+                    <input type="text" class="form-control" id="iDescription" data-bind="value: description" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="iStartedOn" class="col-md-2"></label>
+                <div class="col-md-10">
+                    <input type="text" class="form-control" id="iStartedOn" data-bind="value: startedOn" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="iEndedOn" class="col-md-2"></label>
+                <div class="col-md-10">
+                    <input type="text" class="form-control" id="iEndedOn" data-bind="value: endedOn" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-dark">Save</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Stated On</th>
+            <th>Ended On</th>
+            <th>Owner</th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: libraries">
+        <tr>
+            <td><!-- ko text:title --><!-- /ko --></td>
+            <td><!-- ko text:description --> <!-- /ko --></td>
+            <td><!-- ko text:moment(startedOn).format('MMMM Do YYYY') --> <!-- /ko --></td>
+            <td><!-- ko text:moment(endedOn).format('MMMM Do YYYY') --> <!-- /ko --></td>
+            <td><!-- ko text:ownerFullName --> <!-- /ko --></td>
+        </tr>
+    </tbody>
+</table>
