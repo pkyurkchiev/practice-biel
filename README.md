@@ -14,7 +14,7 @@ This repository is part of the practice course for Business Informatics with Eng
 
 #
 ### Course work
-* Task: [Link BG](https://github.com/pkyurkchiev/practice-biel/tree/master/cource-work/README.md)
+* [Task](https://github.com/pkyurkchiev/practice-biel/tree/master/cource-work/README.md)
 
 
 #
