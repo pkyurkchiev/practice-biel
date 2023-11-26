@@ -13,6 +13,11 @@ This repository is part of the practice course for Business Informatics with Eng
 
 
 #
+### Exercises documentation:
+* [Tools](https://github.com/pkyurkchiev/practice-biel/tree/master/documentations/tools.md)
+
+
+#
 ### Course work
 * [Task](https://github.com/pkyurkchiev/practice-biel/tree/master/cource-work/README.md)
 * [Assessment Requirements](https://github.com/pkyurkchiev/practice-biel/blob/master/documentations/assessment-requirements.md)
